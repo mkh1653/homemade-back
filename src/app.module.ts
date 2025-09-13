@@ -37,7 +37,7 @@ import { UserModule } from './user/user.module';
     CityModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'db.jcaecplhlpbflrjmpohk.supabase.co',
       port: 5432,
       username: 'postgres',
       password: '16537319',
