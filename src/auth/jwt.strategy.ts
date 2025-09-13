@@ -8,8 +8,14 @@ import { UserRole } from 'src/common/enums/role.enum';
 
 const cookieExtractor = (req: Request) => {
   let token = null;
-  console.log(req && JSON.stringify(req.cookies))
-  if (req && req.cookies) {
+
+  if (req.headers.authorization) {
+    const [type, tokenFromHeader] = req.headers.authorization.split(' ');
+    if (type === 'Bearer' && tokenFromHeader) {
+      token = tokenFromHeader;
+    }
+  }
+  if (!token && req.cookies) {
     token = req.cookies['access_token'];
   }
   return token;
