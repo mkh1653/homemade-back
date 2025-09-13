@@ -28,7 +28,7 @@ export class AuthController {
       // secure: process.env.NODE_ENV === 'production',
       secure: true,
       sameSite: 'none',
-      domain: '.homemade-front.vercel.app',
+      // domain: '.homemade-front.vercel.app',
       path: '/',
       maxAge: 3600000 * 24,
     });
