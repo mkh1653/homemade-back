@@ -15,6 +15,7 @@ const cookieExtractor = (req: Request) => {
       token = tokenFromHeader;
     }
   }
+  
   if (!token && req.cookies) {
     token = req.cookies['access_token'];
   }
