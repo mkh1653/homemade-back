@@ -17,7 +17,7 @@ async function bootstrap() {
   );
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
   app.enableCors({
-    origin: 'https://homemade-front.vercel.app',
+    origin: 'https://homemade-front.onrender.com',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true,
   });

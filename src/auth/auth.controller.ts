@@ -27,8 +27,8 @@ export class AuthController {
       httpOnly: true,
       // secure: process.env.NODE_ENV === 'production',
       secure: true,
-      sameSite: 'none',
-      // domain: '.homemade-front.vercel.app',
+      sameSite: 'strict',
+      domain: '.onrender.com',
       path: '/',
       maxAge: 3600000 * 24,
     });
